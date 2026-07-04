@@ -117,7 +117,7 @@
   const loadAssistant = async () => {
     try {
       const res = await fetch(
-        `http://localhost:8000/api/assistant/config/${userId}`,
+        `https://voicrserver.onrender.com/api/assistant/config/${userId}`,
       );
 
       const data = await res.json();
@@ -242,7 +242,7 @@
         try {
           status.innerText = "Thinking...";
 
-          const res = await fetch("http://localhost:8000/api/assistant/ask", {
+          const res = await fetch("https://voicrserver.onrender.com/api/assistant/ask", {
             method: "POST",
             headers: {
               "Content-Type": "application/json",
